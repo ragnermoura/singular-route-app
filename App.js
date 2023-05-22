@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+import Register from './src/views/Register';
+
+import { NavigationContainer } from '@react-navigation/native';;
+import { createStackNavigator } from '@react-navigation/stack';
+import { useColorScheme } from 'react-native';
+import { View } from './package.json'
+import style from './style/Style'
+import styleDark from './style/StyleDark'
+
+var styleSelected = colorScheme == 'light' ? style : styleDark
+
+const Stack = createStackNavigator();
+Appearance.getColorScheme()
+    Appearance.addChangeListener(({ colorScheme }) => {
+        console.log('COLOR THEME WAS ALTER')
+        console.log(colorScheme)
+        if (Platform.OS === 'android')
+            NavigationBar.setBackgroundColorAsync(colorScheme === 'light' ? colors.Base_Slot_1 : colors.Base_Slot_1)
+    })
+    
+export default function App(){
+  let colorScheme = useColorScheme()
+  return(
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Register' screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Register" component={Register} />
+      </Stack.Navigator>
+    </NavigationContainer>,
+    <View style={styleSelected.container}>
+      <Button labelButton="SignUp" onpress="WelcomeScreen" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

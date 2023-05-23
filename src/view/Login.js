@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react'
-import { SafeAreaView, StatusBar, Appearance, useColorScheme, Platform, KeyboardAvoidingView, View, Text, Image, TouchableOpacity } from 'react-native'
+import { SafeAreaView, StatusBar, Appearance, useColorScheme, Platform, KeyboardAvoidingView, View, Text, TouchableOpacity, Image, Switch } from 'react-native'
 import style from '../../style/Style'
 import styleDark from '../../style/StyleDark'
 import * as NavigationBar from 'expo-navigation-bar'
@@ -8,24 +8,23 @@ import Loader from '../components/Loader'
 import InputDefault from '../components/InputDefault'
 import ButtonPrimary from '../components/ButtonPrimary'
 
-export default function Register({ route, navigation }) {
+export default function Login({ route, navigation }) {
     const [isLoading, setIsLoading] = useState(true)
-    const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [repeatPassword, setRepeatPassword] = useState("")
+    const [remember, setRemember] = useState(true)
     let colorScheme = useColorScheme()
     var styleSelected = colorScheme == 'light' ? style : styleDark
     var colors = require('../../style/Colors.json')
 
     useEffect(() => {
-        console.log('OPEN', Register.name, 'SCREEN')
+        console.log('OPEN', Login.name, 'SCREEN')
         //For test loading
         setTimeout(() => {
             setIsLoading(true)
         }, 1000);
         return () => {
-            console.log('SCREEN', Register.name, 'CLOSE')
+            console.log('SCREEN', Login.name, 'CLOSE')
         }
     }, [])
     Appearance.getColorScheme()
@@ -54,15 +53,21 @@ export default function Register({ route, navigation }) {
                 keyboardVerticalOffset={Platform.OS == 'android' ? -150 : -150}
             >
                 <View style={[{ flex: 1, backgroundColor: colors.BaseSlot3, marginTop: Platform.OS == "android" ? 0 : 0, marginLeft: 20, marginRight: 20 }]}>
-                    <Text style={styleSelected.textNormal24}>Create new account</Text>
-                    <View style={{ flex: 1, justifyContent: "space-evenly" }}>
-                        <InputDefault placeholder={"Full name"} input={name} setInput={setName} />
+                    <Text style={styleSelected.textNormal24}>Welcome back!</Text>
+                    <View style={{ flex: .4, justifyContent: "space-evenly" }}>
                         <InputDefault placeholder={"Email address"} input={email} setInput={setEmail} />
-                        <InputDefault placeholder={"Create password"} input={password} setInput={setPassword} secureTextEntry={true} />
-                        <InputDefault placeholder={"Repeat password"} input={repeatPassword} setInput={setRepeatPassword} secureTextEntry={true} />
+                        <InputDefault placeholder={"Create password"} input={password} setInput={setPassword} />
                     </View>
                     <View style={{ flex: 1, justifyContent: "space-evenly" }}>
-                        <Text style={styleSelected.textNormal24}>Or Sign up with</Text>
+                        <View style={{ height: 70, justifyContent: "space-between", alignItems: "center", flexDirection: "row" }}>
+                            <Text>Remember me</Text>
+                            <Switch
+                                thumbColor={remember ? colors.BaseSlot1 : colors.BaseSlot3}
+                                trackColor={{ true: "gray", false: "gray" }}
+                                value={remember}
+                                onValueChange={(value) => setRemember(value)} />
+                        </View>
+                        <Text style={styleSelected.textNormal24}>Or Sign in with</Text>
                         <View style={{ flexDirection: "row", height: 100, justifyContent: "space-evenly", alignItems: "center", width: "80%", alignSelf: "center" }}>
                             <TouchableOpacity onPress={() => { console.log("PRESS IN FACEBOOK") }}>
                                 <Image source={require("../../assets/images/ic_baseline-facebook.png")} style={{ height: 45, width: 45 }} resizeMode='contain' />
@@ -75,7 +80,7 @@ export default function Register({ route, navigation }) {
                             </TouchableOpacity>
                         </View>
                     </View>
-                    <ButtonPrimary title={"Sign up"} colorText={colors.BaseSlot3} />
+                    <ButtonPrimary title={"Sign in"} colorText={colors.BaseSlot3} />
                 </View>
             </KeyboardAvoidingView>
         </SafeAreaView>

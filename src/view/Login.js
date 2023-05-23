@@ -56,7 +56,7 @@ export default function Login({ route, navigation }) {
                     <Text style={styleSelected.textNormal24}>Welcome back!</Text>
                     <View style={{ flex: .4, justifyContent: "space-evenly" }}>
                         <InputDefault placeholder={"Email address"} input={email} setInput={setEmail} />
-                        <InputDefault placeholder={"Create password"} input={password} setInput={setPassword} />
+                        <InputDefault placeholder={"Your password"} input={password} setInput={setPassword} />
                     </View>
                     <View style={{ flex: 1, justifyContent: "space-evenly" }}>
                         <View style={{ height: 70, justifyContent: "space-between", alignItems: "center", flexDirection: "row" }}>

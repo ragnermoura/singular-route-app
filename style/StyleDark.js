@@ -14,7 +14,7 @@ const style = StyleSheet.create(
             fontSize: 32,
             fontWeight: 700
         },
-        button:{
+        button: {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
@@ -28,10 +28,10 @@ const style = StyleSheet.create(
             backgroundColor: colors.BaseSlot1,
             borderRadius: 10
         },
-        textbutton:{
+        textbutton: {
             color: 'white',
         },
-        button2:{
+        button2: {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
@@ -47,16 +47,22 @@ const style = StyleSheet.create(
             borderWidth: 1,
             borderColor: '#7C7C7C',
         },
-        textbutton2:{
+        textbutton2: {
             color: 'black'
         },
-        textbutton3:{
+        textbutton3: {
             color: colors.BaseSlot1
         },
-        WelcomeImage:{
+        WelcomeImage: {
             flex: 1,
             width: '100%',
-        
+
+        },
+
+        //text
+        textNormal18: {
+            fontSize: 18,
+            fontWeight: 500
         }
     }
 )

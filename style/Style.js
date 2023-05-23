@@ -51,12 +51,14 @@ const style = StyleSheet.create(
             width: '100%',
 
         },
-
-        //text
         textNormal18: {
             fontSize: 18,
-            fontWeight: 500
-        }
+            fontWeight: 500,
+        },
+        EventImage:{
+            flex: 1,
+            width: '100%',
+        },
     }
 )
 

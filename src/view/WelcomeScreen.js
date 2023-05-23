@@ -67,9 +67,14 @@ export default function WelcomeScreen({ route, navigation }) {
                         />
                     </View>
                     <View style={{ flex: 1, justifyContent: "space-evenly" }}>
-                        <View style={{ height: "60%", justifyContent: "space-evenly" }}>
+                        <View style={{ height: "60%", justifyContent: "space-evenly", width: "90%", alignSelf: "center" }}>
                             <ButtonPrimary title={"Sign in"} colorText={colors.BaseSlot3} event={() => { console.log("PRESS") }} />
-                            <ButtonSecondary title={"No account yet? "} title2={"Sign up"} colorText={colors.BaseSlot4} colorText2={colors.BaseSlot1} />
+                            <ButtonSecondary
+                                title={"No account yet? "}
+                                title2={"Sign up"}
+                                colorText={colors.BaseSlot4}
+                                colorText2={colors.BaseSlot1}
+                                event={() => navigation.navigate("Register")} />
                         </View>
                     </View>
                 </View>

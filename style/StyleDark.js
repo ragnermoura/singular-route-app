@@ -14,38 +14,31 @@ const style = StyleSheet.create(
             fontSize: 32,
             fontWeight: 700
         },
+        textNormal24: {
+            fontSize: 24,
+            fontWeight: 600
+        },
         button: {
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: 10,
-            position: 'absolute',
-            width: 317,
-            height: 60,
-            left: 36.5,
-            top: 130,
             backgroundColor: colors.BaseSlot1,
-            borderRadius: 10
+            height: 60,
+            width: "90%",
+            borderRadius: 10,
+            alignSelf: "center",
+            justifyContent: "center",
+            alignItems: "center"
         },
         textbutton: {
             color: 'white',
         },
         button2: {
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: 10,
-            position: 'absolute',
-            width: 317,
             height: 60,
-            left: 36.5,
-            top: 200,
-            backgroundColor: colors.BaseSlot3,
+            width: "90%",
             borderRadius: 10,
+            alignSelf: "center",
+            borderColor: colors.BaseSlot4,
             borderWidth: 1,
-            borderColor: '#7C7C7C',
+            justifyContent: "center",
+            alignItems: "center"
         },
         textbutton2: {
             color: 'black'

@@ -14,10 +14,14 @@ const style = StyleSheet.create(
             fontSize: 32,
             fontWeight: 700
         },
+        textNormal24: {
+            fontSize: 24,
+            fontWeight: 600
+        },
         button: {
             backgroundColor: colors.BaseSlot1,
             height: 60,
-            width: "90%",
+            width: "100%",
             borderRadius: 10,
             alignSelf: "center",
             justifyContent: "center",
@@ -28,7 +32,7 @@ const style = StyleSheet.create(
         },
         button2: {
             height: 60,
-            width: "90%",
+            width: "100%",
             borderRadius: 10,
             alignSelf: "center",
             borderColor: colors.BaseSlot4,

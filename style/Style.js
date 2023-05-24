@@ -51,11 +51,20 @@ const style = StyleSheet.create(
             width: '100%',
 
         },
-
-        //text
         textNormal18: {
             fontSize: 18,
             fontWeight: 500
+        },
+        textNormal12: {
+            fontSize: 12,
+            fontWeight: 400
+        },
+        EventImage: {
+            width: '100%',
+            height: '100%',
+        },
+        ScrollView:{
+            marginHorizontal: 0
         }
     }
 )

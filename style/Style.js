@@ -51,12 +51,17 @@ const style = StyleSheet.create(
             width: '100%',
 
         },
-
-        //text
         textNormal18: {
             fontSize: 18,
             fontWeight: 500
-        }
+        },
+        textNormal20: {
+            fontSize: 20,
+            fontWeight: 700
+        },
+        checkbox: {
+            margin: 5
+          },
     }
 )
 

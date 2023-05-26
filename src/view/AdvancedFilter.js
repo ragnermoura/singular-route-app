@@ -56,7 +56,7 @@ export default function AdvancedFilter({ route, navigation }) {
 
     function HomeScreen() {
         return (
-            
+
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                 <Image
                     source={require('../../assets/images/home.png')}
@@ -192,7 +192,7 @@ export default function AdvancedFilter({ route, navigation }) {
                         colorText={colors.BaseSlot3}
                         event={() => { navigation.navigate("Login") }} />
                 </View>
-                
+
                 <View style={{ flexDirection: 'row' }}>
                     <Tab.Navigator>
                         <Tab.Screen name="Home" component={HomeScreen}
@@ -255,7 +255,7 @@ export default function AdvancedFilter({ route, navigation }) {
                                 }
                             }}
                         />
-                        
+
                         <Tab.Screen name="Profile" component={ProfileScreen}
 
                             options={{
@@ -275,8 +275,7 @@ export default function AdvancedFilter({ route, navigation }) {
                     </Tab.Navigator>
                 </View>
             </KeyboardAvoidingView>
-            
         </SafeAreaView>
-       
+
     )
 }

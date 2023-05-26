@@ -21,7 +21,7 @@ const style = StyleSheet.create(
         button: {
             backgroundColor: colors.BaseSlot1,
             height: 60,
-            width: "90%",
+            width: "100%",
             borderRadius: 10,
             alignSelf: "center",
             justifyContent: "center",
@@ -32,7 +32,7 @@ const style = StyleSheet.create(
         },
         button2: {
             height: 60,
-            width: "90%",
+            width: "100%",
             borderRadius: 10,
             alignSelf: "center",
             borderColor: colors.BaseSlot4,
@@ -51,11 +51,37 @@ const style = StyleSheet.create(
             width: '100%',
 
         },
-
-        //text
         textNormal18: {
             fontSize: 18,
             fontWeight: 500
+        },
+        textNormal15: {
+            fontSize: 15,
+            fontWeight: 300
+        },
+        textNormal12: {
+            fontSize: 12,
+            fontWeight: 400
+        },
+        map_pin: {
+            height: 14,
+            width: 14
+        },
+        down_button: {
+            height: 18,
+            width: 18
+        },
+        Museu_Image:{
+            width: 354,
+            height: 120
+        },
+        Image_Museu_2:{
+            width: 89,
+            height: 84
+        },
+        label:{
+            width: 30,
+            height: 20,
         }
     }
 )

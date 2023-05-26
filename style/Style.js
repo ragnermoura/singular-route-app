@@ -51,11 +51,37 @@ const style = StyleSheet.create(
             width: '100%',
 
         },
-
-        //text
         textNormal18: {
             fontSize: 18,
             fontWeight: 500
+        },
+        textNormal15: {
+            fontSize: 15,
+            fontWeight: 300
+        },
+        textNormal12: {
+            fontSize: 12,
+            fontWeight: 400
+        },
+        map_pin: {
+            height: 14,
+            width: 14
+        },
+        down_button: {
+            height: 18,
+            width: 18
+        },
+        Museu_Image:{
+            width: 354,
+            height: 120
+        },
+        Image_Museu_2:{
+            width: 89,
+            height: 84
+        },
+        label:{
+            width: 30,
+            height: 20,
         }
     }
 )

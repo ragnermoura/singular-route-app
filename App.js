@@ -5,19 +5,24 @@ import { createStackNavigator } from '@react-navigation/stack';
 import WelcomeScreen from './src/view/WelcomeScreen';
 import Register from './src/view/Register';
 import Login from './src/view/Login';
+import HomeScreen from './src/view/HomeScreen'
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='WelcomeScreen' screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName='HomeScreen' screenOptions={{ headerShown: false }}>
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
         <Stack.Screen name="Register" component={Register} options={{
           headerShown: true,
           headerTitle: ""
         }} />
         <Stack.Screen name="Login" component={Login} options={{
+          headerShown: true,
+          headerTitle: ""
+        }} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{
           headerShown: true,
           headerTitle: ""
         }} />

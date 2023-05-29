@@ -51,11 +51,53 @@ const style = StyleSheet.create(
             width: '100%',
 
         },
-
-        //text
         textNormal18: {
             fontSize: 18,
             fontWeight: 500
+        },
+        search_not_menu:{
+            width: 16,
+            height: 16
+        },
+        buttonfilter:{
+            width: 63,
+            height: 28,
+            backgroundColor: '#F0F0F0',
+            borderRadius: 5,
+            justifyContent: 'center',
+            alignItems: 'center',
+        },
+        textNormalFilter:{
+            fontSize: 12,
+            fontWeight: 400
+        },
+        buttonfilterprimary:{
+            width: 63,
+            height: 28,
+            backgroundColor: colors.BaseSlot1,
+            borderRadius: 5,
+            justifyContent: 'center',
+            alignItems: 'center'   
+        },
+        generalImage:{
+            width: 90,
+            height: 90
+        },
+        map_pin:{
+            width: 10,
+            height: 12
+        },
+        heart_fav:{
+            width: 18,
+            height: 16
+        },
+        share:{
+            width: 18,
+            height: 18
+        },
+        dropdown:{
+            height: 16,
+            width: 16
         }
     }
 )

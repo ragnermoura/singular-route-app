@@ -66,6 +66,7 @@ const style = StyleSheet.create(
             borderRadius: 5,
             justifyContent: 'center',
             alignItems: 'center',
+            marginRight: 9
         },
         textNormalFilter:{
             fontSize: 12,
@@ -77,7 +78,8 @@ const style = StyleSheet.create(
             backgroundColor: colors.BaseSlot1,
             borderRadius: 5,
             justifyContent: 'center',
-            alignItems: 'center'   
+            alignItems: 'center',
+            marginRight: 12   
         },
         generalImage:{
             width: 90,
@@ -98,6 +100,12 @@ const style = StyleSheet.create(
         dropdown:{
             height: 16,
             width: 16
+        },
+        seperator:{
+            height: 1,
+            width: '100%',
+            backgroundColor: '#E9E9E9',
+            dotted: 9
         }
     }
 )

@@ -364,6 +364,49 @@ export default function BasicFilters({ route, navigation }) {
                                     <View style={{ backgroundColor: 'white', width: 90 }}>
                                         <Image
                                             style={styleSelected.generalImage}
+                                            source={require('../../assets/images/maneskin.png')}
+                                            placeholder="image"
+                                            contentFit="cover"
+                                            transition={1000}
+                                        />
+                                    </View>
+                                    <View style={{ alignSelf: 'center', marginTop: -80, marginLeft: 60, right: 20 }}>
+                                        <Text style={styleSelected.textNormal12}>Mon, Apr 23 · 20.00 Pm</Text>
+                                        <View style={{ width: '100%' }}>
+                                            <Text style={[styleSelected.textNormal16, { fontWeight: 700, marginTop: 8 }]}>Maneskin</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row', marginTop: 10 }}>
+                                            <Image
+                                                style={[styleSelected.map_pin, {}]}
+                                                source={require('../../assets/images/map-pin.png')}
+                                                placeholder="image"
+                                                contentFit="cover"
+                                                transition={1000}
+                                            />
+                                            <Text style={[styleSelected.textNormal12, { marginLeft: 2, marginTop: -5 }]}>Bela Vista Park, Lisboa,</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row', marginLeft: 'auto', justifyContent: 'space-between', marginTop: -54, marginRight: -75 }}>
+                                            <Image
+                                                style={[styleSelected.heart_fav, { marginTop: 4, marginRight: 10 }]}
+                                                source={require('../../assets/images/heart-empty.png')}
+                                                placeholder="image"
+                                                contentFit="cover"
+                                                transition={1000}
+                                            />
+                                            <Image
+                                                style={[styleSelected.share, { marginTop: 4, marginRight: 10 }]}
+                                                source={require('../../assets/images/share.png')}
+                                                placeholder="image"
+                                                contentFit="cover"
+                                                transition={1000}
+                                            />
+                                        </View>
+                                    </View>
+                                </View>
+                                <View style={{ height: 90, backgroundColor: colors.BaseSlot3, marginLeft: 20, marginTop: 20 }}>
+                                    <View style={{ backgroundColor: 'white', width: 90 }}>
+                                        <Image
+                                            style={styleSelected.generalImage}
                                             source={require('../../assets/images/arcade.png')}
                                             placeholder="image"
                                             contentFit="cover"
@@ -404,8 +447,8 @@ export default function BasicFilters({ route, navigation }) {
                                     </View>
                                 </View>
                             </View>
-
-                            <View style={{ flexDirection: 'row', marginTop: 2 }}>
+                            <ScrollView stickyHeaderIndices={[0]}>
+                            <View style={{ flexDirection: 'row'}}>
                                 <Tab.Navigator>
                                     <Tab.Screen name="Home" component={HomeScreenMenu}
                                         options={{
@@ -487,8 +530,9 @@ export default function BasicFilters({ route, navigation }) {
 
                                 </Tab.Navigator>
                             </View>
+                            </ScrollView>
+                            </View>
                         </View>
-                    </View>
                 </KeyboardAvoidingView>
 
             </SafeAreaView>

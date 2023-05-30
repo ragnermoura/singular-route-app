@@ -106,6 +106,9 @@ const style = StyleSheet.create(
             width: '100%',
             backgroundColor: '#E9E9E9',
             dotted: 9
+        },
+        stickyfooter:{
+           position: 'fixed'
         }
     }
 )

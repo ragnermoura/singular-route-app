@@ -18,6 +18,11 @@ const style = StyleSheet.create(
             fontSize: 24,
             fontWeight: 600
         },
+        textNormal14:{
+            fontSize: 14,
+            fontWeight: 400,
+            fontFamily: 'Inter'
+        },
         button: {
             backgroundColor: colors.BaseSlot1,
             height: 60,
@@ -52,11 +57,15 @@ const style = StyleSheet.create(
 
         },
 
-        //text
         textNormal18: {
             fontSize: 18,
             fontWeight: 500
-        }
+        },
+        textNormal20:{
+            fontSize: 20,
+            fontWeight: 700
+        },
+
     }
 )
 

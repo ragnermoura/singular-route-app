@@ -18,10 +18,15 @@ const style = StyleSheet.create(
             fontSize: 24,
             fontWeight: 600
         },
+        textNormal14:{
+            fontSize: 14,
+            fontWeight: 400,
+            fontFamily: 'Inter'
+        },
         button: {
             backgroundColor: colors.BaseSlot1,
             height: 60,
-            width: "90%",
+            width: "100%",
             borderRadius: 10,
             alignSelf: "center",
             justifyContent: "center",
@@ -32,7 +37,7 @@ const style = StyleSheet.create(
         },
         button2: {
             height: 60,
-            width: "90%",
+            width: "100%",
             borderRadius: 10,
             alignSelf: "center",
             borderColor: colors.BaseSlot4,
@@ -52,11 +57,15 @@ const style = StyleSheet.create(
 
         },
 
-        //text
         textNormal18: {
             fontSize: 18,
             fontWeight: 500
-        }
+        },
+        textNormal20:{
+            fontSize: 20,
+            fontWeight: 700
+        },
+
     }
 )
 

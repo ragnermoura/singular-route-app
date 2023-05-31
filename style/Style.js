@@ -66,6 +66,17 @@ const style = StyleSheet.create(
             fontWeight: 700
         },
 
+        textNormal12: {
+            fontSize: 12,
+            fontWeight: 400
+        },
+        EventImage: {
+            width: '100%',
+            height: '100%',
+        },
+        ScrollView:{
+            marginHorizontal: 0
+        }
     }
 )
 

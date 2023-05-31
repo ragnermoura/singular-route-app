@@ -8,6 +8,7 @@ import Login from './src/view/Login';
 import ForgotPasswordEmail from './src/view/ForgotPasswordEmail';
 import ForgotPasswordCode from './src/view/ForgotPasswordCode';
 import ForgotPasswordNewPassword from './src/view/ForgotPasswordNewPassword';
+import EventDetails from './src/view/EventDetails';
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,10 @@ export default function App() {
           headerTitle: ""
         }} />
         <Stack.Screen name="ForgotPasswordNewPassword" component={ForgotPasswordNewPassword} options={{
+          headerShown: true,
+          headerTitle: ""
+        }} />
+        <Stack.Screen name="EventDetails" component={EventDetails} options={{
           headerShown: true,
           headerTitle: ""
         }} />

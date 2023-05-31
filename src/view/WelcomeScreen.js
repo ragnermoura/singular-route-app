@@ -9,7 +9,7 @@ import ButtonPrimary from '../components/ButtonPrimary'
 import ButtonSecondary from '../components/ButtonSecondary'
 
 export default function WelcomeScreen({ route, navigation }) {
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     let colorScheme = useColorScheme()
     var styleSelected = colorScheme == 'light' ? style : styleDark
     var colors = require('../../style/Colors.json')

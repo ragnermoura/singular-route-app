@@ -6,13 +6,27 @@ import WelcomeScreen from './src/view/WelcomeScreen';
 import Register from './src/view/Register';
 import Login from './src/view/Login';
 import BasicFilters from './src/view/BasicFilters'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+function TabHomeScreen() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={BasicFilters} options={{
+        headerShown: true
+      }}/>
+      <Tab.Screen name="Settings" component={BasicFilters} />
+    </Tab.Navigator>
+  )
+}
 
 export default function App() {
+
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='BasicFilters' screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName='TabHomeScreen' screenOptions={{ headerShown: false }}>
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
         <Stack.Screen name="Register" component={Register} options={{
           headerShown: true,
@@ -20,6 +34,10 @@ export default function App() {
         }} />
         <Stack.Screen name="Login" component={Login} options={{
           headerShown: true,
+          headerTitle: ""
+        }} />
+        <Stack.Screen name="TabHomeScreen" component={TabHomeScreen} options={{
+          headerShown: false,
           headerTitle: ""
         }} />
         <Stack.Screen name="BasicFilters" component={BasicFilters} options={{

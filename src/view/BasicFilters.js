@@ -448,93 +448,10 @@ export default function BasicFilters({ route, navigation }) {
                                 </View>
                             </View>
                             <ScrollView stickyHeaderIndices={[0]}>
-                            <View style={{ flexDirection: 'row'}}>
-                                <Tab.Navigator>
-                                    <Tab.Screen name="Home" component={HomeScreenMenu}
-                                        options={{
-                                            tabBarIcon: ({ focused }) => {
-                                                return (
-                                                    <Image
-                                                        style={{ height: 30, width: 30 }}
-                                                        source={require('../../assets/images/home.png')}
-                                                        placeholder="image"
-                                                        contentFit="cover"
-                                                        transition={1000}
-                                                    />
-                                                )
-                                            }
-                                        }}
-                                    />
-                                    <Tab.Screen name="Search" component={SearchScreen}
-                                        options={{
-                                            tabBarIcon: ({ focused }) => {
-                                                return (
-                                                    <Image
-                                                        style={{ height: 30, width: 30 }}
-                                                        source={require('../../assets/images/search.png')}
-                                                        placeholder="image"
-                                                        contentFit="cover"
-                                                        transition={1000}
-                                                    />
-                                                )
-                                            }
-                                        }}
-                                    />
-                                    <Tab.Screen name="Ticket" component={TicketScreen}
-                                        options={{
-                                            tabBarIcon: ({ focused }) => {
-                                                return (
-                                                    <Image
-                                                        style={{ height: 30, width: 30 }}
-                                                        source={require('../../assets/images/ticket.png')}
-                                                        placeholder="image"
-                                                        contentFit="cover"
-                                                        transition={1000}
-                                                    />
-                                                )
-                                            }
-                                        }}
-                                    />
-                                    <Tab.Screen name="Heart" component={HeartScreen}
-                                        options={{
-                                            tabBarIcon: ({ focused }) => {
-                                                return (
-                                                    <Image
-                                                        style={{ height: 30, width: 30 }}
-                                                        source={require('../../assets/images/heart_menu.png')}
-                                                        placeholder="image"
-                                                        contentFit="cover"
-                                                        transition={1000}
-                                                    />
-                                                )
-                                            }
-                                        }}
-                                    />
-
-                                    <Tab.Screen name="Profile" component={ProfileScreen}
-
-                                        options={{
-                                            tabBarIcon: ({ focused }) => {
-                                                return (
-                                                    <Image
-                                                        style={{ height: 30, width: 30 }}
-                                                        source={require('../../assets/images/user.png')}
-                                                        placeholder="image"
-                                                        contentFit="cover"
-                                                        transition={1000}
-                                                    />
-                                                )
-                                            }
-                                        }}
-                                    />
-
-                                </Tab.Navigator>
-                            </View>
                             </ScrollView>
-                            </View>
                         </View>
+                    </View>
                 </KeyboardAvoidingView>
-
             </SafeAreaView>
         </ScrollView>
     )

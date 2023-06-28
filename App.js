@@ -9,6 +9,7 @@ import ForgotPasswordEmail from './src/view/ForgotPasswordEmail';
 import ForgotPasswordCode from './src/view/ForgotPasswordCode';
 import ForgotPasswordNewPassword from './src/view/ForgotPasswordNewPassword';
 import EventDetails from './src/view/EventDetails';
+import FirstSteps from './src/view/FirstSteps';
 
 const Stack = createStackNavigator();
 
@@ -41,6 +42,7 @@ export default function App() {
           headerShown: true,
           headerTitle: ""
         }} />
+        <Stack.Screen name="FirstSteps" component={FirstSteps} />
       </Stack.Navigator>
     </NavigationContainer>
   );
